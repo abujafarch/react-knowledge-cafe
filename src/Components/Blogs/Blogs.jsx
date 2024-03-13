@@ -5,11 +5,11 @@ const Blogs = () => {
     useEffect(()=>{
         fetch('blogs.json')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setBlogs(data))
     })
     return (
-        <div>
-            <h3>Hello</h3>
+        <div className="w-4/6">
+            <h1>Blogs: {blogs.length}</h1>
         </div>
     );
 };
